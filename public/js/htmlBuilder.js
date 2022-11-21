@@ -66,25 +66,24 @@ function buildHtmlType(types){
 }
 
 function setInformationEvolutions(response){
-    let pokemon = pokemons.find(p => p.idPokemon == response.idPokemon);
     let evolutions = "";
     evolutions += `
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="${pokemon.photo == undefined ? 'No name' : pokemon.photo}" class="img-fluid rounded-start" alt="${pokemon.name}">
+                            <img src="${response.pokemon.photo == undefined ? 'No name' : response.pokemon.photo}" class="img-fluid rounded-start" alt="${response.pokemon.name}">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                            <h5 class="card-title"><span class="font-weight-bold">Name:</span> ${pokemon.name == undefined ? '' : pokemon.name}</h5>
-                            <p class="card-text"><span class="font-weight-bold">Effect:</span> ${response.effect.short_effect == undefined ? '' : response.effect.short_effect}</p>
+                            <h5 class="card-title"><span class="font-weight-bold">Name:</span> ${response.pokemon.name == undefined ? '' : response.pokemon.name}</h5>
+                            <p class="card-text"><span class="font-weight-bold">Effect:</span> ${response.effect == undefined ||  response.effect == null? '' : response.effect.short_effect}</p>
                             </div>
                         </div>
                     </div>
                 </div>`;
 
     evolutions += `<h5 class="card-title">Evolutions</h5>`;
-    response.evolves = response.evolves.filter(x => x.name !==pokemon.name);
+    response.evolves = response.evolves.filter(x => x.name !== response.pokemon.name);
     let htmlEvolutions = `
     <div class="card">
         <div class="card-body pb-0">
