@@ -1,0 +1,50 @@
+.div-center {
+    text-align: center;
+}
+body {
+	background-color: #f5f7fa;
+}
+
+.testimonial-card .card-up {
+  height: 100px;
+  overflow: hidden;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.aqua-gradient {
+  background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+}
+
+.testimonial-card .avatar {
+  width: 100px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+#see-details {
+  font-size: 2rem;
+}
+
+.type-pokemon{
+  text-align: left;
+}
+
+.evolution-character{
+  width: 80%;
+  height: 80%;
+}
+
+.section-card{
+  max-width: 23rem;
+}
+
+.container-pagination {
+  overflow-x:scroll;overflow-y:hidden;width:250px;height:200px;
+}

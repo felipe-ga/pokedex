@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/front.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./js/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <header class="text-blue-600 bg-blue-200 body-font w-full">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="./img/logo.png" alt="terminal" class="w-10 h-10 text-white">
+            <span class="ml-3 text-xl">Poke API</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a target="_blank" href="https://github.com/felipe-ga/Felipe" class="mr-5 hover:text-gray-900"><i class="fa fa-github fa-2x xl:fa-1x"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/fg-aguilar" class="mr-5 hover:text-gray-900"><i class="fa fa-linkedin fa-2x xl:fa-1x"></i></a>
+          </nav>
+        </div>
+    </header>
+    <main>   
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto">
+                <div class="flex flex-col text-center w-full">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Pokemons</h1>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-3 xl:grid-cols-6" id="content-pokemon">
+                
+            </div>
+        </section>
+        
+    </main>
+    <div class="div-center">
+          <div class="flex justify-center">
+            <nav aria-label="Page navigation example">
+              <ul class="flex list-style-none" id="pagination">
+              </ul>
+            </nav>
+          </div>
+    </div>
+    <div id="demo">
+
+    </div>
+
+    
+    <footer class='w-full text-center border-t border-grey p-4 pin-b bg-blue-100'>
+        <div class="p-4 text-sm md:flex md:items-center md:justify-center">
+            <a target="_blank" href="https://github.com/felipe-ga/Felipe" class="hover:text-gray-900 block px-4 py-2 m-2 transition duration-500 ease-in-out rounded hover:bg-teal-800">
+                <i class="fa fa-github fa-2x"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/fg-aguilar" class="hover:text-gray-900 block px-4 py-2 m-2 transition duration-500 ease-in-out rounded hover:bg-teal-800">
+                <i class="fa fa-linkedin fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-detail-pokemon" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Pokemons details</h5>
+              <button onclick="closeModal('modal-detail-pokemon');" type="button" class="" data-bs-toggle="" aria-label="">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+             
+            </div>
+            <div class="modal-footer">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/constants.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/htmlBuilder.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/variables.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
